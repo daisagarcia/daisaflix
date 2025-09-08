@@ -1,117 +1,94 @@
-/* Reset Básico e Fontes */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
-    color: #f5f5f5;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Sessão de Cinema</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* Estilo do Cabeçalho */
-.header {
-    background-color: #0d0d0d;
-    text-align: center;
-    padding: 40px 20px;
-    border-bottom: 2px solid #e50914;
-}
+    <header class="header">
+        <h1>Sua Sessão de Cinema</h1>
+        <p>Descubra os melhores filmes para a sua noite</p>
+    </header>
 
-.header h1 {
-    font-size: 2.5rem;
-    color: #e50914;
-    margin-bottom: 10px;
-}
+    <main class="container">
+        <section class="movie-section">
+            <h2 class="section-title">Em Destaque</h2>
+            <div class="movie-grid">
+                <!-- Cartão de Filme 1 -->
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/71QPOIxOijL._UF1000,1000_QL80_.jpg" alt="Pôster do filme Interestelar">
+                    <div class="card-content">
+                        <h3>Interestelar</h3>
+                        <p class="movie-info">Ficção Científica • 2014</p>
+                        <p class="rating">⭐️ 4.9</p>
+                    </div>
+                </div>
 
-.header p {
-    font-size: 1.1rem;
-    color: #aaa;
-}
+                <!-- Cartão de Filme 2 -->
+                <div class="movie-card">
+                    <img src="https://br.web.img3.acsta.net/r_1280_720/img/b9/b1/b9b129a01380657162ce620dd4d45c8c.jpg" alt="Pôster do filme Divertida Mente">
+                    <div class="card-content">
+                        <h3>Divertida Mente</h3>
+                        <p class="movie-info">Animação • 2015</p>
+                        <p class="rating">⭐️ 4.7</p>
+                    </div>
+                </div>
 
-/* Container Principal */
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
+                <!-- Cartão de Filme 3 -->
+                <div class="movie-card">
+                    <img src="https://acdn-us.mitiendanube.com/stores/004/687/740/products/pos-03507-fd63da705c6912dd8c17181188198594-1024-1024.jpg" alt="Pôster do filme Harry Potter e a Pedra Filosofal">
+                    <div class="card-content">
+                        <h3>Harry Potter e a Pedra Filosofal</h3>
+                        <p class="movie-info">Fantasia • 2001</p>
+                        <p class="rating">⭐️ 4.5</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/* Seção de Filmes */
-.movie-section {
-    margin-bottom: 40px;
-}
+        <section class="movie-section">
+            <h2 class="section-title">Lançamentos</h2>
+            <div class="movie-grid">
+                <!-- Cartão de Filme 4 -->
+                <div class="movie-card">
+                    <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-o-rei-leao-b-pop-arte-poster/poparteskins2/15938515598/18044c6de04fbb9691afdb79969d04e4.jpeg" alt="Pôster do filme O Rei Leão">
+                    <div class="card-content">
+                        <h3>O Rei Leão</h3>
+                        <p class="movie-info">Animação • 1994</p>
+                        <p class="rating">⭐️ 5.0</p>
+                    </div>
+                </div>
 
-.section-title {
-    font-size: 2rem;
-    color: #fff;
-    border-bottom: 2px solid #444;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
+                <!-- Cartão de Filme 5 -->
+                <div class="movie-card">
+                    <img src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/32/17/19874294.jpg" alt="Pôster do filme Matrix">
+                    <div class="card-content">
+                        <h3>Matrix</h3>
+                        <p class="movie-info">Ficção Científica • 1999</p>
+                        <p class="rating">⭐️ 5.0</p>
+                    </div>
+                </div>
 
-/* Grid de Filmes */
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
+                <!-- Cartão de Filme 6 -->
+                <div class="movie-card">
+                    <img src="https://artwork.anghcdn.co/webp/?id=223746528&size=320" alt="Pôster do filme Viva - A Vida é Uma Festa">
+                    <div class="card-content">
+                        <h3>Viva - A Vida é Uma Festa</h3>
+                        <p class="movie-info">Animação • 2017</p>
+                        <p class="rating">⭐️ 4.9</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-/* Cartão de Filme */
-.movie-card {
-    background-color: #262626;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
+    <footer class="footer">
+        <p>&copy; 2024 Sua Sessão de Cinema. Todos os direitos reservados.</p>
+    </footer>
 
-.movie-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
-}
-
-.movie-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 2px solid #333;
-}
-
-.card-content {
-    padding: 15px;
-}
-
-.card-content h3 {
-    font-size: 1.3rem;
-    margin: 10px 0;
-    color: #fff;
-}
-
-.movie-info {
-    font-size: 0.9rem;
-    color: #999;
-}
-
-.rating {
-    font-size: 1.1rem;
-    color: #f5c518;
-    margin-top: 10px;
-}
-
-/* Estilo do Rodapé */
-.footer {
-    background-color: #0d0d0d;
-    text-align: center;
-    padding: 20px;
-    color: #999;
-    font-size: 0.9rem;
-    margin-top: 40px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2rem;
-    }
-    .section-title {
-        font-size: 1.5rem;
-    }
-}
+</body>
+</html>
