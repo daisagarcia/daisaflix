@@ -3,103 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Filmes - Lançamentos</title>
+    <title>Catálogo Moderno de Filmes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos CSS básicos para a estrutura */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+        /* Variáveis CSS para gerenciamento de cores */
+        :root {
+            --primary-color: #E50914; /* Vermelho Netflix/Cinema */
+            --background-dark: #141414;
+            --background-light: #f9f9f9;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --card-bg: #222222;
         }
 
+        /* Estilos Globais e Reset Básico */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
         .header {
-            background-color: #000;
-            color: #fff;
-            padding: 20px 0;
+            background-color: #000000;
+            padding: 30px 20px;
             text-align: center;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8em;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 2px;
         }
 
+        /* Conteúdo Principal */
         .main {
-            padding: 20px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 2em;
-            color: #cc0000; /* Cor de destaque para os títulos de seção */
-            border-bottom: 2px solid #cc0000;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: var(--text-light);
+            border-bottom: 3px solid var(--primary-color);
             padding-bottom: 10px;
-            margin-top: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
         }
 
-        /* Estilos para o Grid de Filmes */
+        /* Grid de Filmes (Layout) */
         .movie-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            /* Garante que haja pelo menos 3 colunas em telas grandes, 2 em tablets e 1 em mobile */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
         }
 
-        /* Estilos para o Cartão de Filme */
+        /* Cartão de Filme (Componente Moderno) */
         .movie-card {
-            background-color: #fff;
+            background-color: var(--card-bg);
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative; /* Para o efeito de rating */
         }
 
         .movie-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
         }
 
         .movie-card img {
             width: 100%;
+            height: 400px; /* Altura ligeiramente ajustada para um visual mais clean */
             display: block;
             object-fit: cover;
-            height: 450px; 
         }
 
         .card-content {
             padding: 15px;
+            text-align: left;
         }
 
         .card-content h3 {
             margin-top: 0;
-            color: #000;
-            font-size: 1.4em;
+            color: var(--text-light);
+            font-size: 1.5em;
+            font-weight: 700;
         }
 
         .movie-info {
-            color: #666;
+            color: #aaaaaa;
             font-size: 0.9em;
-            margin: 5px 0;
+            margin: 5px 0 15px;
+            font-weight: 300;
         }
 
         .rating {
-            font-size: 1.1em;
+            /* Movendo o rating para um "chip" moderno sobre o pôster */
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
             color: gold;
+            padding: 5px 10px;
+            border-radius: 4px;
             font-weight: bold;
-            margin-top: 10px;
+            font-size: 1em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        /* Estilos para o Footer */
+        /* Rodapé Moderno */
         .footer {
-            background-color: #222;
-            color: #fff;
+            background-color: #000000;
+            color: #888888;
             text-align: center;
-            padding: 15px 0;
-            margin-top: 40px;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        /* Mídia Queries para Responsividade */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
@@ -107,39 +146,37 @@
 
     <header class="header">
         <h1>Sua Sessão de Cinema</h1>
-        <nav>
-            </nav>
     </header>
 
     <main class="main">
         <section class="movie-section">
-            <h2 class="section-title">Lançamentos (3 Filmes)</h2>
+            <h2 class="section-title">Últimos Lançamentos</h2>
             <div class="movie-grid">
                 
                 <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+1" alt="Pôster do Filme 1: Corações de Metal">
+                    <img src="https://placehold.co/300x400/222/FFF?text=Fic%C3%A7%C3%A3o+Cient%C3%ADfica+2024" alt="Pôster do Filme: Corações de Metal">
+                    <p class="rating">⭐️ 4.9</p>
                     <div class="card-content">
                         <h3>Corações de Metal</h3>
                         <p class="movie-info">Ficção Científica • 2024</p>
-                        <p class="rating">⭐️ 4.9</p>
                     </div>
                 </div>
 
                 <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+2" alt="Pôster do Filme 2: A Última Canção">
+                    <img src="https://placehold.co/300x400/222/FFF?text=Drama+2023" alt="Pôster do Filme: A Última Canção">
+                    <p class="rating">⭐️ 4.0</p>
                     <div class="card-content">
                         <h3>A Última Canção</h3>
                         <p class="movie-info">Drama • 2023</p>
-                        <p class="rating">⭐️ 4.0</p>
                     </div>
                 </div>
 
                 <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+3" alt="Pôster do Filme 3: Ritmo Perigoso">
+                    <img src="https://placehold.co/300x400/222/FFF?text=Musical+2024" alt="Pôster do Filme: Ritmo Perigoso">
+                    <p class="rating">⭐️ 4.7</p>
                     <div class="card-content">
                         <h3>Ritmo Perigoso</h3>
                         <p class="movie-info">Musical • 2024</p>
-                        <p class="rating">⭐️ 4.7</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +184,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 Sua Sessão de Cinema. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Sua Sessão de Cinema. Design Moderno e Responsivo.</p>
     </footer>
 
 </body>
