@@ -1,61 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Sessão de Cinema</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Catálogo de Filmes - Lançamentos</title>
+    <style>
+        /* Estilos CSS básicos para a estrutura */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #cc0000; /* Cor de destaque para os títulos de seção */
+            border-bottom: 2px solid #cc0000;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para o Grid de Filmes */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Estilos para o Cartão de Filme */
+        .movie-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .movie-card img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 450px; 
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #000;
+            font-size: 1.4em;
+        }
+
+        .movie-info {
+            color: #666;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        .rating {
+            font-size: 1.1em;
+            color: gold;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Estilos para o Footer */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
     <header class="header">
         <h1>Sua Sessão de Cinema</h1>
-        <p>Descubra os melhores filmes para a sua noite</p>
+        <nav>
+            </nav>
     </header>
 
-    <main class="container">
+    <main class="main">
         <section class="movie-section">
-            <h2 class="section-title">Em Destaque</h2>
+            <h2 class="section-title">Lançamentos (3 Filmes)</h2>
             <div class="movie-grid">
-                <!-- Cartão de Filme 1 -->
+                
                 <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+1" alt="Pôster do Filme 1">
-                    <div class="card-content">
-                        <h3>O Legado Esquecido</h3>
-                        <p class="movie-info">Aventura • 2023</p>
-                        <p class="rating">⭐️ 4.5</p>
-                    </div>
-                </div>
-
-                <!-- Cartão de Filme 2 -->
-                <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+2" alt="Pôster do Filme 2">
-                    <div class="card-content">
-                        <h3>A Cidade das Sombras</h3>
-                        <p class="movie-info">Suspense • 2024</p>
-                        <p class="rating">⭐️ 4.8</p>
-                    </div>
-                </div>
-
-                <!-- Cartão de Filme 3 -->
-                <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+3" alt="Pôster do Filme 3">
-                    <div class="card-content">
-                        <h3>O Segredo da Floresta</h3>
-                        <p class="movie-info">Fantasia • 2022</p>
-                        <p class="rating">⭐️ 4.2</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="movie-section">
-            <h2 class="section-title">Lançamentos</h2>
-            <div class="movie-grid">
-                <!-- Cartão de Filme 4 -->
-                <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+4" alt="Pôster do Filme 4">
+                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+1" alt="Pôster do Filme 1: Corações de Metal">
                     <div class="card-content">
                         <h3>Corações de Metal</h3>
                         <p class="movie-info">Ficção Científica • 2024</p>
@@ -63,9 +125,8 @@
                     </div>
                 </div>
 
-                <!-- Cartão de Filme 5 -->
                 <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+5" alt="Pôster do Filme 5">
+                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+2" alt="Pôster do Filme 2: A Última Canção">
                     <div class="card-content">
                         <h3>A Última Canção</h3>
                         <p class="movie-info">Drama • 2023</p>
@@ -73,9 +134,8 @@
                     </div>
                 </div>
 
-                <!-- Cartão de Filme 6 -->
                 <div class="movie-card">
-                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+6" alt="Pôster do Filme 6">
+                    <img src="https://placehold.co/300x450/222/FFF?text=P%C3%B4ster+do+Filme+3" alt="Pôster do Filme 3: Ritmo Perigoso">
                     <div class="card-content">
                         <h3>Ritmo Perigoso</h3>
                         <p class="movie-info">Musical • 2024</p>
