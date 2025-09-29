@@ -1,178 +1,108 @@
-/* Variáveis CSS para gerenciamento de cores */
-:root {
---primary-color: #E50914; /* Vermelho Netflix/Cinema */
---background-dark: #141414;
---background-light: #f9f9f9;
---text-light: #ffffff;
---text-dark: #333333;
---card-bg: #222222;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Sessão de Cinema</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    </head>
+<body>
 
-/* Estilos Globais e Reset Básico */
-body {
-font-family: 'Roboto', sans-serif;
-margin: 0;
-padding: 0;
-background-color: var(--background-dark);
-color: var(--text-light);
-line-height: 1.6;
-}
+    <header class="header">
+        <h1>Sua Sessão de Cinema</h1>
+        <p>Descubra os melhores filmes para a sua noite</p>
+    </header>
 
-/* Cabeçalho */
-.header {
-background-color: #000000;
-padding: 20px 10px;
-text-align: center;
-}
+    <main class="main"> <section class="movie-section">
+            <h2 class="section-title">Em Destaque</h2>
+            <div class="movie-grid">
+                
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://m.media-amazon.com/images/I/71QPOIxOijL._UF1000,1000_QL80_.jpg" alt="Pôster do filme Interestelar">
+                        <p class="rating">⭐️ 4.9</p>
+                    </div>
+                    <div class="card-content">
+                        <h3>Interestelar</h3>
+                        <p class="movie-info">Ficção Científica • 2014</p>
+                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Assistir Agora</a>
+                    </div>
+                </div>
 
-.header h1 {
-margin: 0;
-font-size: 2.8em;
-font-weight: 900; /* Mais peso para o título */
-color: var(--primary-color);
-letter-spacing: 2px;
-}
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://br.web.img3.acsta.net/r_1280_720/img/b9/b1/b9b129a01380657162ce620dd4d45c8c.jpg" alt="Pôster do filme Divertida Mente">
+                        <p class="rating">⭐️ 4.7</p>
+                    </div>
+                    <div class="card-content">
+                        <h3>Divertida Mente</h3>
+                        <p class="movie-info">Animação • 2015</p>
+                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Assistir Agora</a>
+                    </div>
+                </div>
 
-/* Conteúdo Principal */
-.main {
-padding: 40px 20px;
-max-width: 1200px;
-margin: 0 auto;
-}
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://acdn-us.mitiendanube.com/stores/004/687/740/products/pos-03507-fd63da705c6912dd8c17181188198594-1024-1024.jpg" alt="Pôster do filme Harry Potter e a Pedra Filosofal">
+                        <p class="rating">⭐️ 4.5</p>
+                    </div>
+                    <div class="card-content">
+                        <h3>Harry Potter e a Pedra Filosofal</h3>
+                        <p class="movie-info">Fantasia • 2001</p>
+                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Assistir Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.section-title {
-font-size: 2.2em;
-font-weight: 700;
-color: var(--text-light);
-border-bottom: 3px solid var(--primary-color);
-padding-bottom: 10px;
-margin-bottom: 30px;
-text-transform: uppercase;
-}
+        <section class="movie-section">
+            <h2 class="section-title">Clássicos</h2> <div class="movie-grid">
+                
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-o-rei-leao-b-pop-arte-poster/poparteskins2/15938515598/18044c6de04fbb9691afdb79969d04e4.jpeg" alt="Pôster do filme O Rei Leão">
+                        <p class="rating">⭐️ 5.0</p>
+                    </div>
+                    <div class="card-content">
+                        <h3>O Rei Leão</h3>
+                        <p class="movie-info">Animação • 1994</p>
+                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Assistir Agora</a>
+                    </div>
+                </div>
 
-/* Grid de Filmes (Layout) */
-.movie-grid {
-display: grid;
-/* ALTERAÇÃO 1: Reduz a largura mínima de 280px para 220px, permitindo mais cartões por linha. */
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-/* ALTERAÇÃO 2: Reduz o espaçamento entre os cartões para um layout mais compacto. */
-gap: 20px; 
-}
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/32/17/19874294.jpg" alt="Pôster do filme Matrix">
+                        <p class="rating">⭐️ 5.0</p>
+                    </div>
+                    <div class="card-content">
+                        <h3>Matrix</h3>
+                        <p class="movie-info">Ficção Científica • 1999</p>
+                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Assistir Agora</a>
+                    </div>
+                </div>
 
-/* Cartão de Filme (Componente Moderno) */
-.movie-card {
-background-color: var(--card-bg);
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-position: relative; 
-}
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://artwork.anghcdn.co/webp/?id=223746528&size=320" alt="Pôster do filme Viva - A Vida é Uma Festa">
+                        <p class="rating">⭐️ 4.9</p>
+                    </div>
+                    <div class="card-content">
+                        <h3>Viva - A Vida é Uma Festa</h3>
+                        <p class="movie-info">Animação • 2017</p>
+                        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Assistir Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-.movie-card:hover {
-transform: translateY(-10px); /* Levemente mais elevado no hover */
-box-shadow: 0 18px 35px rgba(0, 0, 0, 0.8);
-}
+    <footer class="footer">
+        <p>&copy; 2024 Sua Sessão de Cinema. Todos os direitos reservados.</p>
+    </footer>
 
-/* Contêiner da Imagem para o Efeito de Degradê */
-.poster-container {
-position: relative;
-/* ALTERAÇÃO 3: Reduz a altura do pôster de 400px para 320px. */
-height: 320px; 
-overflow: hidden;
-}
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-.movie-card img {
-width: 100%;
-height: 100%;
-display: block;
-object-fit: cover;
-transition: transform 0.5s ease;
-}
-.movie-card:hover img {
-transform: scale(1.05); /* Zoom sutil ao passar o mouse */
-}
-/* Degradê na base da imagem para transição suave com o texto */
-.poster-container::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 50%; /* Altura do degradê */
-/* Degradê: de transparente para a cor de fundo do card */
-background: linear-gradient(to top, rgba(34, 34, 34, 1) 0%, rgba(34, 34, 34, 0) 100%);
-pointer-events: none; /* Garante que o degradê não interfira na interação */
-}
-
-.card-content {
-padding: 15px;
-text-align: left;
-position: relative; /* Para garantir que o conteúdo fique acima do degradê */
-margin-top: -40px; /* Ajustei um pouco para se adequar à nova altura */
-}
-
-.card-content h3 {
-margin-top: 0;
-color: var(--text-light);
-/* ALTERAÇÃO 4: Reduz o tamanho da fonte do título do cartão. */
-font-size: 1.4em; 
-font-weight: 700;
-}
-
-.movie-info {
-color: #aaaaaa;
-/* ALTERAÇÃO 5: Reduz o tamanho da fonte da informação secundária. */
-font-size: 0.8em; 
-margin: 5px 0 10px;
-font-weight: 300;
-}
-
-.rating {
-/* Movendo o rating para um "chip" moderno sobre o pôster */
-position: absolute;
-top: 10px;
-right: 10px;
-background-color: rgba(0, 0, 0, 0.8);
-color: gold;
-padding: 5px 10px;
-border-radius: 4px;
-font-weight: bold;
-font-size: 1em;
-z-index: 10; /* Garante que fique acima de tudo */
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-/* Botão Moderno */
-.btn-watch {
-display: inline-block;
-background-color: var(--primary-color);
-color: var(--text-light);
-padding: 10px 20px;
-border: none;
-border-radius: 4px;
-font-size: 1em;
-font-weight: 700;
-text-decoration: none;
-cursor: pointer;
-transition: background-color 0.3s ease, transform 0.2s ease;
-margin-top: 10px;
-text-transform: uppercase;
-}
-.btn-watch i {
-margin-right: 8px;
-}
-
-.btn-watch:hover {
-background-color: #ff1a24; /* Um vermelho um pouco mais claro */
-transform: scale(1.02);
-}
-
-/* Rodapé Moderno */
-.footer {
-background-color: #000000;
-color: #888888;
-text-align: center;
-padding: 20px 0;
-margin-top: 50px;
-font-size: 0.9em;
-}
+</body>
+</html>
